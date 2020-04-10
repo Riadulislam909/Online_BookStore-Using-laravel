@@ -21,6 +21,15 @@ class AdminPagesController extends Controller
     }
     public function product_store(Request $request){
 
+
+        $request->validate([
+            'title' => 'required|unique|max:150',
+            'description' => 'required',
+            'price' => 'required|numeric',
+            'quantity' => 'required|numeric',
+            
+        ]);
+
       $product = new Product;
 
       $product->title = $request->title;
@@ -40,7 +49,7 @@ class AdminPagesController extends Controller
           $location = public_path('images/products/' .$img);
           Image::make($image)->save($location);
 
-          
+
           $product_image = new ProductImage;
           $product_image->product_id = $product->id;
           $product_image->image = $img;

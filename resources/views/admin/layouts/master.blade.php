@@ -202,6 +202,8 @@
       </nav>
       <!-- partial -->
 
+      
+
         @yield('content')
 
     </div>
