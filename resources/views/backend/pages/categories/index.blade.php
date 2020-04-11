@@ -26,7 +26,7 @@
        
        <td>
           
-          <img src="{!! asset('images/categories/'.$category->image) !!}"width=100px>
+          <img src="{!! asset('images/categories/'.$category->image) !!}"width="100px">
 
        </td>
 

@@ -6,36 +6,50 @@
 
       <div class="card">
         <div class="card-header">
-          Edit Book
+          Edit Category
         </div>
         <div class="card-body">
-          <form action="{{ route('admin.product.update', $product->id) }}" method="post" enctype="multipart/form-data">
-            {{ csrf_field() }}
+        <form action="{{ route('admin.category.update', $category->id) }}" method="post" enctype="multipart/form-data">
+            @csrf
             @include('backend.partials.messages')
             <div class="form-group">
-              <label for="exampleInputEmail1">Book Name</label>
-              <input type="text" class="form-control" name="title" id="exampleInputEmail1" value="{{$product->title}}" >
+              <label for="name">Name</label>
+              <input type="text" class="form-control" name="name" id="name" value="{{$category->name}}">
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Description</label>
-              <textarea name="description" rows="8" cols="80" class="form-control">{{$product->description}}"</textarea>
+              <textarea name="description" rows="8" cols="80" class="form-control">{!! $category->description !!}</textarea>
 
-            </div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Price</label>
-              <input type="number" class="form-control" name="price" id="exampleInputEmail1" value="{{$product->price}}" >
-            </div>
-            <div class="form-group">
-              <label for="product_image">Book Image</label>
-              <input type="file" class="form-control" name="product_image" id="product_image"  >
             </div>
 
             <div class="form-group">
-              <label for="exampleInputEmail1">Quantity</label>
-              <input type="number" class="form-control" name="quantity" id="exampleInputEmail1" value="{{$product->quantity}}">
+              <label for="exampleInputPassword1">Parent Category(optional)</label>
+              <select class="form-control" name="parent_id">
+              <option value="">Please select a Primary Category</optional>
+              @foreach ($main_categories as $cat)
+               
+               <option value="{{$cat->id}}"{{$cat->id==$category->parent_id ? ' selected' : '' }}>{{$cat->name}}</option>
+
+              @endforeach
+
             </div>
 
-            <button type="submit" class="btn btn-primary">Update Book</button>
+           
+            <div class="form-group">
+           
+
+              <label for="oldimage">Category Old Image</label> <br>
+
+               <img src="{!! asset('images/categories/'.$category->image) !!}" width="80px"> <br>
+               
+              <label for="image">Category New Image</label> <br>
+
+              <input type="file" class="form-control" name="image" id="image">
+            </div>
+
+           
+
+            <button type="submit" class="btn btn-success">Update Category</button>
           </form>
         </div>
       </div>
