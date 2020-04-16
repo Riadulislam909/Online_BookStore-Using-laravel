@@ -2,7 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Online Book Store</title>
+  <title>
+   @yield('title','Online Book Store')
+  </title>
 
   @include('frontend.partials.styles')
 </head>
