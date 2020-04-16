@@ -15,6 +15,13 @@ class ProductsController extends Controller
     }
     public function show($slug){
 
-        //
+        $product = Product::where('slug',$slug)->first();
+        if (!is_null($product)){
+            return view('frontend.pages.product.show', compact('product'));
+        }
+        else{
+            session()->flash('errors','Sorry there is Book in this URL! ');
+            return redirect()->route('products');
+        }
     }
 }
