@@ -4,6 +4,16 @@
  background: #02aadd!important; 
 }
 
+.child-rows{
+  padding-left: 20px;
+  border-left: 1px solid #dfdfdf;
+  background: #FFF;
+}
+
+.childe-rows a.list-group-item{
+  border-left: 0px!important;
+}
+
 
 /**
  * Override CSS's
