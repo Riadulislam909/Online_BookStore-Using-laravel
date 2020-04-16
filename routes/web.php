@@ -20,6 +20,7 @@ Route::get('/','Frontend\PagesController@index')->name('index');
 //product route
 Route::get('/products','Frontend\ProductsController@index')->name('products');
 Route::get('/product/{slug}','Frontend\ProductsController@show')->name('products.show');
+Route::get('/serach','Frontend\PagesController@search')->name('search');
 
 
 //admin route
