@@ -6,10 +6,10 @@
 
       <div class="card">
         <div class="card-header">
-          Add Category
+          Add Prokashoni
         </div>
         <div class="card-body">
-          <form action="{{ route('admin.category.store') }}" method="post" enctype="multipart/form-data">
+          <form action="{{ route('admin.brand.store') }}" method="post" enctype="multipart/form-data">
             @csrf
             @include('backend.partials.messages')
             <div class="form-group">
@@ -22,27 +22,16 @@
 
             </div>
 
-            <div class="form-group">
-              <label for="exampleInputPassword1">Parent Category(optional)</label>
-              <select class="form-control" name="parent_id">
-              <option value="">Please select a Parent Category</optional>
-              @foreach ($main_categories as $category)
-               
-               <option value="{{$category->id}}">{{$category->name}}</option>
-
-              @endforeach
-              </select>
-
-            </div>
+            
            
             <div class="form-group">
-              <label for="image">Category Image</label>
+              <label for="image">Prokashoni Image</label>
               <input type="file" class="form-control" name="image" id="image"  >
             </div>
 
            
 
-            <button type="submit" class="btn btn-primary">Add Category</button>
+            <button type="submit" class="btn btn-primary">Add Prokashoni</button>
           </form>
         </div>
       </div>

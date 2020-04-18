@@ -36,6 +36,18 @@
             </div>
           </li>
 
+
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#brand-pages" aria-expanded="false" aria-controls="brand-pages"> <img class="menu-icon" src="/images/menu_icons/08.png" alt="menu icon"> <span class="menu-title">Manage Prokashoni</span><i class="menu-arrow"></i></a>
+            <div class="collapse" id="brand-pages">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="{{route('admin.brands')}}">Manage Prokashoni</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('admin.brand.create')}}">Add Prokashoni</a></li>
+              
+              </ul>
+            </div>
+          </li>
+
           
           
           
