@@ -3,18 +3,14 @@
 @section('content')
   <div class="main-panel">
     <div class="content-wrapper">
-      
-      
       <div class="card card-body">
-        
-        <h3>Wellcome to your Admin Panel</h3>
+        <h3>Welcome to your Admin Panel</h3>
         <br>
         <br>
-        <a href="{{route('index')}}" class="btn btn-primary btn-lg" target="_blank">Visit Main Site</a>
-
-
+        <p>
+          <a href="{!! route('index') !!}" class="btn btn-primary btn-lg" target="_blank">Visit Main Site</a>
+        </p>
       </div>
-      
     </div>
     <!-- content-wrapper ends -->
     <!-- partial:partials/_footer.html -->

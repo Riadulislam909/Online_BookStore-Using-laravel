@@ -13,25 +13,19 @@
   <!-- plugin css for this page -->
   <!-- End plugin css for this page -->
   <!-- inject:css -->
+  <link rel="stylesheet" href="{{asset('css/datatables.min.css')}}">
   <link rel="stylesheet" href="{{asset('css/admin_style.css')}}">
   <!-- endinject -->
-  <link rel="shortcut icon" href="/images/favicon.png" />
+  <link rel="shortcut icon" href="images/favicon.png" />
 </head>
 
 <body>
   <div class="container-scroller">
-    <!-- partial:partials/_navbar.html -->
- 
-     @include('backend.partials.nav')
-    
+    @include('backend.partials.nav')
     <!-- partial -->
     <div class="container-fluid page-body-wrapper">
-    
-      <!-- partial -->
-
-      @include('backend.partials.left_slide_bar')
-
-        @yield('content')
+      @include('backend.partials.left_sidebar')
+      @yield('content')
 
     </div>
     <!-- page-body-wrapper ends -->
@@ -42,12 +36,19 @@
   <script src="{{ asset('js/jquery-3.2.1.slim.min.js') }}"></script>
   <script src="{{ asset('js/popper.min.js') }}" ></script>
   <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('js/data-table.min.js') }}"></script>
 
-
+  <script>
+    $(document).ready(function() {
+      $('#dataTable').DataTable();
+    } );
+  </script>
 
   <!-- endinject -->
   <!-- Plugin js for this page-->
   <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+
+
   <!-- End plugin js for this page-->
   <!-- inject:js -->
   <script src="js/off-canvas.js"></script>
