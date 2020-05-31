@@ -92,6 +92,14 @@ Route::group(['prefix' => 'admin'], function(){
   });
 
 
+   // manage user Routes
+   Route::group(['prefix' => '/users'], function(){
+    Route::get('/', 'Backend\UsersController@index')->name('admin.users');
+    
+    Route::post('/user/delete/{id}', 'Backend\UsersController@delete')->name('admin.user.delete');
+  });
+
+
     // Orders Routes
   Route::group(['prefix' => '/orders'], function(){
     Route::get('/', 'Backend\OrdersController@index')->name('admin.orders');

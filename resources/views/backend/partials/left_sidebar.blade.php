@@ -17,6 +17,7 @@
       <span class="menu-title">Dashboard</span></a>
     </li>
     
+    
 
     <li class="nav-item">
       <a class="nav-link" data-toggle="collapse" href="#general-pages" aria-expanded="false" aria-controls="general-pages"> 
@@ -89,6 +90,11 @@
               </div>
             </li>
 
+
+            
+            <li class="nav-item"> <a class="nav-link" href="{{ route('admin.users') }}">Manage Users</a></li>
+            
+         
 
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#slider-pages" aria-expanded="false" aria-controls="general-pages"> <span class="menu-title">

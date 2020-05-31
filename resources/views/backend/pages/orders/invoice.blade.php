@@ -56,10 +56,10 @@ thead {
         <img src="{{ asset('images/favicon.png') }}" alt="">
       </div>
       <div class="float-right site-address">
-        <h4>Lara Ecommerce</h4>
-        <p>31/1, Purana Paltan, Dhaka-1200</p>
-        <p>Phone: <a href="">01951233084</a></p>
-        <p>Email: <a href="mailto:info@laraecommerce.com">info@laraecommerce.com</a></p>
+        <h4>Online Bookstore</h4>
+        <p>Basundhara, Dhaka</p>
+        <p>Phone: <a href="">0001112223333</a></p>
+        <p>Email: <a href="#">info@stepin814@gmail.com</a></p>
       </div>
       <div class="clearfix"></div>
     </div>
@@ -161,7 +161,7 @@ thead {
         @endif
 
         <div class="thanks mt-3">
-          <h4>Thank you for your business !!</h4>
+          <h4>Thank you!!</h4>
         </div>
 
         <div class="authority float-right mt-5">
